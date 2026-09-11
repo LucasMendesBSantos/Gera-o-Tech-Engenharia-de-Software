@@ -1,0 +1,58 @@
+cd
+mkdir
+
+doker compose up --build
+
+
+
+run é diferente de start. 
+
+run é para fazer o container...
+start é para iniciar o container...
+
+=====================================================================================================================================
+AULA 01 - INTRODUÇÃO AO CURSO E DOCKER.
+
+docker -v : verificar a versão do Docker
+
+docker run "Nome da aplicação": instalar e rodar a aplicação
+
+docker ps -a: mostra os containers mesmo que estejam pausados
+
+docker image ls: mostra os containers mais bonitinho
+
+docker start"ID do container": é para colocar a aplicação para rodar
+
+docker rm "ID do container que NÃO está rodando": para excluir as imagens que não estão rodando
+
+docker rmi "ID da imagem que NÃO está rodando": para excluir as imagens que não estão rodando
+
+docker stop CONTAINER_ID (ou apelido vulgo alberto): para pausar as imagens
+
+docker run ubuntu: para baixar e rodar o ubuntu
+
+docker exec -it bash "ID do SO": para rodar e ficar interagindo com a imagem (Com o bash, inicia o terminal)
+
+docker run --name "Nome do ID que quer trocar" -it ubuntu bash: vai criar um novo container que vai ter o nome bonitinho
+
+
+=================================================================================================================================
+COMANDOS DO DOCKERFILE
+
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]   
+
+
+
+

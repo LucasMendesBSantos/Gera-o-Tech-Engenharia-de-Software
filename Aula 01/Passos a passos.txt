@@ -1,0 +1,43 @@
+AULA 01 - INTRODUÇÃO AO CURSO E DOCKER.
+
+docker -v : verificar a versão do Docker
+
+docker run "Nome da aplicação": instalar e rodar a aplicação
+
+docker ps -a: mostra os containers mesmo que estejam pausados
+
+docker image ls: mostra os containers mais bonitinho
+
+docker start"ID do container": é para colocar a aplicação para rodar
+
+docker rm "ID do container que NÃO está rodando": para excluir as imagens que não estão rodando
+
+docker rmi "ID da imagem que NÃO está rodando": para excluir as imagens que não estão rodando
+
+docker stop CONTAINER_ID (ou apelido vulgo alberto): para pausar as imagens
+
+docker run ubuntu: para baixar e rodar o ubuntu
+
+docker exec -it bash "ID do SO": para rodar e ficar interagindo com a imagem (Com o bash, inicia o terminal)
+
+docker run --name "Nome do ID que quer trocar" -it ubuntu bash: vai criar um novo container que vai ter o nome bonitinho
+
+=================================================================================================================================
+
+Para criar uma API:
+
+import express from 'express';
+
+
+const PORT = 3000
+
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('minha API está funcionando')
+
+})
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`)
+})
