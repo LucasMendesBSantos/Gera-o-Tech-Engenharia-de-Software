@@ -53,6 +53,31 @@ EXPOSE 3000
 
 CMD ["node", "server.js"]   
 
+============================================================================================
 
+Aula 02
 
+Docker build -t "Nome da imagem":qualquer coisa pra especificar a versão . --> é para fazer a imagem da API que acabamos de fazer
+
+Docker image ls --> para ver as imagens
+
+docker run --name api-node-container-teste -p 3000:3000 api-node:1.0
+docker run --name [Nome da API] -p 3000:3000 [Nome da aplicação onde vc quer que rode + versão]
+
+docker run -d --name api-node-container-teste -p 3000:3000 api-node:1.0
+docker run -d --name [Nome da API] -p 3000:3000 [Nome da aplicação onde vc quer que rode + versão] ---> a diferença é o -d que não mostra os console.log
+
+===========================================================================================
+Docker compose 
+
+services:
+  back:
+    build: .
+    ports:
+      - "3000:3000"
+
+--------------------------
+No terminal depois de parar os containers:
+
+Docker compose up --build
 
