@@ -79,5 +79,8 @@ services:
 --------------------------
 No terminal depois de parar os containers:
 
-Docker compose up --build
+Docker compose up --build ---> sobe os containers pro docker
+
+
+docker compose down -v --> da um rollback e dps tem que subir novamente com o up --build
 
