@@ -6,12 +6,12 @@ CREATE TABLE servicos(
 );
 
 CREATE TABLE produtos(
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR (100) NOT NULL,
     marca VARCHAR (100),
     categoria VARCHAR (60),
     descricao VARCHAR (255),
-    preco DECIMAL (18, 2)
+    preco DECIMAL (18, 2) NOT NULL
 );
 
 INSERT INTO servicos (id, nome, descricao, preco)
