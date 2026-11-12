@@ -1,0 +1,13 @@
+{
+  "name": "hackathon-gt4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose -f docker-compose.dev.yml up -d && node --env-file=.env --watch desafio-07.js",
+    "db:down": "docker compose -f docker-compose.dev.yml down"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  }
+}

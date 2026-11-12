@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Cypress</title>
+</head>
+<body>
+  <h1 id="titulo">Atividade Cypress</h1>
+  <br>
+  <br>
+  <h4>RECEBE UMA IDADE EM UM INPUT E MOSTRA NA TELA SE ESSA PESSOA É MAIOR OU MENOR DE IDADE.</h4>
+
+  <form id="formulario" novalidate>
+    <input type="text" id="campo" data-cy="idade" placeholder="Digite a idade" required>
+    <button type="submit" id="enviar" data-cy="enviar">Enviar</button>
+  </form>
+
+  <p id="mensagem" data-cy="resposta"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+services:
+    api:
+        build:
+            environment:
+                db_host: db
+            depends-on:
+              - db
+            
+    db:
+        image: mysql:8
+        environment:
+            - mysql-root_password: segredo
+            - mysql_database: loja
+            

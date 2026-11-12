@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:8
+    container_name: mysql-loja
+    environment:
+      MYSQL_ROOT_PASSWORD: segredo
+      MYSQL_DATABASE: loja
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql

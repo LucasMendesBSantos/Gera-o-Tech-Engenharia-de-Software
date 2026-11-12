@@ -1,0 +1,17 @@
+{
+  "name": "atividade-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --e2e --browser chrome",
+    "cy:op": "cypress open --e2e --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^16.2.1"
+  }
+}

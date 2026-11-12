@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: lojinha_alberto
+      MYSQL_USER: alberto
+      MYSQL_PASSWORD: devpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - dados:/var/lib/mysql
+      - ./setup-loja.sql:/docker-entrypoint-initdb.d/setup-loja.sql:ro
+
+volumes:
+  dados:
